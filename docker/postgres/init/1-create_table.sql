@@ -1,0 +1,12 @@
+CREATE DATABASE postgres_db;
+
+\c postgres_db;
+
+CREATE TABLE users (
+    id VARCHAR(26) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    mail VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP
+);
